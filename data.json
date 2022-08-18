@@ -1,0 +1,13 @@
+[
+    {"id":1 ,"nombre":"aceite de coco 450kg","precio":29.50,"imagen":"img/AceiteCoco.JPG","cantidad":0},
+    {"id":2 ,"nombre":"pan de molde","precio":7.50,"imagen":"img/PanMolde.JPG","cantidad":0},
+    {"id":3 ,"nombre":"leche con almendras 1/2L","precio":26.50,"imagen":"img/LecheAlmendra.JPG","cantidad":0},
+    {"id":4 ,"nombre":"leche de coco 1/2l","precio":25.50,"imagen":"img/LecheCoco.JPG","cantidad":0},
+    {"id":5 ,"nombre":"yogurth griego","precio":18.50,"imagen":"img/YogurthGriego.JPG","cantidad":0},
+    {"id":6 ,"nombre":"yogurth con stevia","precio":10.50,"imagen":"img/YogurStevia.JPG","cantidad":0},
+    {"id":7 ,"nombre":"inka chips","precio":27.50,"imagen":"img/AceiteOlivo.jpg","cantidad":0},
+    {"id":8 ,"nombre":"galleta de coco","precio":5.50,"imagen":"img/GalletaDeCoco.jpg","cantidad":0},
+    {"id":9 ,"nombre":"galleta de quinua","precio":6.50,"imagen":"img/GalletDeQuinua.jpg","cantidad":0},
+    {"id":10 ,"nombre":"palito de ajonjoli","precio":3.50,"imagen":"img/CrisinosAjonjoli.jpg","cantidad":0},
+    {"id":11 ,"nombre":"carne de soya","precio":12.50,"imagen":"img/CarneSoya.jpg","cantidad":0}
+]

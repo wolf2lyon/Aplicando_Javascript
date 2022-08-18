@@ -1,0 +1,607 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+p{
+    padding: 0% ;
+    margin: 0 !important;
+}
+.body{
+    font-family:sans-serif;
+    padding: 90px 20px 0;
+}
+.header{
+    border-bottom: 2px solid gray ;
+    background-color: #e8e1e1;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+  
+}
+.contador_fixed{
+    position: absolute;
+    top: 38px;
+    //right: 0;
+    right: 5000px;
+    background: white;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+    line-height: 20px;
+}
+.contenedor_fixed_visible{
+    right: 0;
+}
+.navegador{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+.navegador-link{
+    color: rgb(76, 209, 78);
+    text-decoration: none;
+}
+.logo{
+    padding: 0 40px;
+    height: 80px;
+}
+.navegador-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+.navegador-menu-item{
+    font-size:18px;
+    margin: 0 10px;
+    line-height: 80px;
+    width: max-content;
+}
+.navegador-menu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+.navegador-menu-link:hover{
+    transition: 0.5s;
+    color: #11542a;
+}
+.navegador-toggle{
+    color: white;
+    background: none;
+    border:none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+.navegador-carrito{
+    color: rgb(47, 184, 20);
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 30px;
+    line-height: 80px;
+    
+}
+/*Css para la notificacion de la libreria de Toastify*/
+.Agregar_Carrito-Notificacion{
+    background: linear-gradient(to right,rgb(47, 184, 20),rgb(68, 162, 49));
+}
+/*Css para el contenedor del carrito*/
+.contenedor-carrito-productos{
+    display: flex;
+    flex-direction: column;
+    background-color: #efefef;
+    position: fixed;
+    bottom: 0;
+    top:80px;
+    width: 40%;
+    height: calc(100% - 80px);
+    overflow-y:calc(100% - 100px);
+    right: -100%;
+    transition: right 0.7s;
+}
+.contenedor-carrito_visible{
+    right: 0;
+}
+/*Elementos de cada producto*/
+.imagen-productos-navegador{
+    height: 70px;
+    width: 50px;
+    
+}
+.imagen-contenedora{
+    width: 20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.titulo-carrito{
+    border-bottom:3px solid #5e6a68;
+}
+.alto-card-carrito{
+    height: 90px !important;
+    align-items: center;
+}
+.cantidad-color{
+    border: 1px solid #626966;
+    border-radius: 3px;
+}
+.card-title-carrito{
+    font-family: 'Varela Round', sans-serif;
+    text-transform: uppercase;
+}
+.car-title{
+    font-family: 'Varela Round', sans-serif;
+    text-transform: uppercase;
+}
+.imagen-productos{
+    width: 120px;
+    height: 150px;
+}
+.card-text{
+    margin-top: 4px;
+}
+.card-title-monto{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 13px;
+}
+.card-monto-carrito{
+    font-family: 'Varela Round', sans-serif;
+}
+/*Modificacion de mi boton de finalizar Compra*/
+.contenedor-finalizar-productos{
+    height: 100px;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    top:  calc(100% - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+.shopping{
+    z-index: 110;
+}
+.contenedor-total-precio{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#Finalizar-Compra{
+    width:calc(100% - 70px) ;
+    margin-bottom: 20px;
+
+}
+.titulo-total-precio,.total-precio_mostrar{
+    font-family: 'Varela Round', sans-serif;
+}
+.contenedor-producto_overflow-y{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 170px);
+    overflow-y: auto;
+}
+
+/*Estilos para el boton de confirmacion*/
+.swal2-confirm.swal2-styled {
+    border-radius: 100em !important;
+}
+.swal2-styled.swal2-confirm {
+    border-radius: 100em !important;
+    background-color: #198754 !important;
+
+}
+.swal2-title {
+    color: #198754 !important;
+    font-size: 1.40em !important;
+    font-weight: 300 !important;
+}
+
+/*Estilos para la pagina de finalizar compra*/
+.Header-FinalizarCompra{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid gray;
+    background-color: #e8e1e1;
+}
+.ctn-body-compra{
+    background-color: #198754;
+    opacity: 0.8;
+    height:calc(100vh - 82px);
+}
+.body-FinalizarCompra{
+    height:calc(100vh - 170px);
+    width: 98.5%;
+    background-color: white;
+}
+.color-letra-h1{
+    color: white;
+    
+}
+.container-TotalPrecio{
+    display: flex;
+    justify-content: center;
+    background-color:rgb(232, 225, 225);
+    width: 40%;
+}
+.container-TarjetaCredito{
+    background-color:rgb(232, 225, 225);
+    width: 80%;
+}
+.body-TotalPrecio{
+    width: 80%;
+    height: 85%;
+    border-bottom: 2px solid gray;
+    overflow-y: auto;
+}
+.modificarCard-TotalPrecio{
+    padding-left: 1rem !important;
+}
+.imagen-productos-FinalizarCompra{
+    height: 60px;
+    width: 40px;
+}
+.title-InformacionCompra{
+    text-transform: uppercase;
+    font-size: 0.7rem !important;
+}
+.titleSubtotal-InformacionCompra{
+    font-size: 0.75rem;
+}
+.SubTotal-InformacionCompra{
+    width: 25%;
+}
+.contenedor-InformacionCompra{
+    width: 30%;
+}
+.boton-eliminar:hover{
+    color: red;
+}
+.boten-eliminar{
+    width: 15%;
+    padding: 10px;
+}
+/*Estilos para mi tarjeta de credito*/
+.container-TarjetaCredito{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.ctn-TarjetaCredito{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    padding-top: 7px;
+}
+/*---------------------------------------*/
+.tarjeta{
+    width: 100%;
+    max-width: 390px;
+    position: relative;
+    color: #000;
+    transition: 0.8s ease all;
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    cursor: pointer;
+    z-index: 2;
+    
+}
+
+.tarjeta>div{
+    padding: 10px;
+    border-radius: 15px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 10px 0 rgb(90 116 148 / 30%)
+
+}
+.datos{
+    color: white;
+}
+.tarjeta .delantera{
+    width: 100%;
+    background: url(../img/bg-tarjeta-03.jpg);
+    background-size: cover;
+}
+.delantera .logo-marca{
+    text-align: right;
+    min-height: 20px;
+    max-height: 30px;
+}
+.delantera .logo-marca img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 50px;
+    min-height:40px;
+}
+.delantera .chip{
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 10px;
+    max-height: 30px;
+}
+.delantera .grupo .label {
+    font-size: 16px;
+    color: #7d8994;
+    margin-bottom: 5px;
+}
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion{
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.delantera .flexbox{
+    display: flex;
+    justify-content: space-between;
+}
+/*--------Tarjeta Trasera--------*/
+.trasera{
+    background: url(../img/bg-tarjeta-03.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.tarjeta.active{
+    transform: rotateY(180deg);
+}
+.trasera .barra-magnetica{
+    height: 25px;
+    background:#fff;
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+.trasera .link-banco {
+    font-size: 14px;
+    color: #fff;
+}
+.trasera .datos{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.trasera .datos p {
+    margin-bottom: 5px;
+}
+.trasera .datos #firma{
+    width: 70%;
+     
+}
+.trasera .datos #firma .firma{
+    height: 30px;
+    background: repeating-linear-gradient(rgb(159, 150, 150) 0,rgb(159, 150, 150) 4px,rgb(255, 250, 250) 4px,rgb(255, 250, 250) 8px);
+     
+}
+.trasera .datos #firma .firma p{
+    line-height: 30px;
+    font-family: 'Liu Jian Mao Cao';
+    color: #000;
+    font-size: 25px;
+    font-weight: 20px;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+.trasera .datos #cvv{
+    width: 20%;
+     
+}
+.trasera .datos #cvv .cvv{
+    background: white;
+    height: 30px;
+    color:#000;
+    text-align: center;
+    line-height: 30px;
+}
+.trasera .leyenda{
+    font-size: 10px;
+    line-height: 20px;
+    color: white;
+}
+.trasera .link-banco{
+    font-size: 14px;
+    color: #fff;
+
+}
+.contenedor-btn .btn-abrir-formulario{
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    line-height: 10px;
+    background-color: #198754;
+    color: #fff;
+    position: relative;
+    top: -10px;
+    z-index: 3;
+    border-radius: 100%;
+    box-shadow: -5px 4px 8px rgba(0, 212, 92, 0.4);
+    padding: 4px;
+    transition: all .2s ease;
+    border:none;
+    cursor: pointer;
+}
+.contenedor-btn .btn-abrir-formulario i{
+    font-size: 12px;
+}
+.contenedor-btn .btn-abrir-formulario:hover{
+    background-color: #1a754b;
+}
+.contenedor-btn .btn-abrir-formulario.active{
+    transform: rotate(45deg);
+
+}
+/*------Formulario Tarjeta---------*/
+.formulario-tarjeta{
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -158px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .3s ease-out;
+}
+.formulario-tarjeta.active {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formulario-tarjeta label {
+	display: block;
+	color: #7d8994;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+	border: 2px solid #CED6E0;
+	font-size: 12px;
+	height: 30px;
+	width: 100%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+}
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+	border: 2px solid #93BDED;
+}
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+	outline: rgb(4,4,4);
+	box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
+}
+.formulario-tarjeta input {
+	margin-bottom: 9px;
+    
+}
+.formulario-tarjeta #inputNombre {
+	text-transform: uppercase;
+    
+}
+
+.formulario-tarjeta .flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+.formulario-tarjeta .expira {
+	width: 100%;
+}
+
+.formulario-tarjeta .ccv {
+	min-width: 100px;
+}
+.formulario-tarjeta .grupo-select {
+	width: 100%;
+	margin-right: 15px;
+	position: relative;
+}
+
+.formulario-tarjeta select {
+	-webkit-appearance: none;
+}
+
+.formulario-tarjeta .grupo-select i {
+	position: absolute;
+	color: #CED6E0;
+	top: 10px;
+	right: 10px;
+	transition: .3s ease all;
+}
+
+.formulario-tarjeta .grupo-select:hover i {
+	color: #93bfed;
+}
+
+.formulario-tarjeta .btn-enviar {
+	border: none;
+	padding: 10px;
+	font-size: 15px;
+    line-height: 15px;
+	color: #fff;
+    background-color: #198754;
+	box-shadow: 2px 2px 10px 0px rgba(0, 212, 92, 0.4);
+	cursor: pointer;
+
+}
+
+.formulario-tarjeta .btn-enviar:hover {
+	background-color: #1a754b;
+}
+//*Estilos para el contador
+.contador{
+    min-width: 20px;
+    width: 10%;
+}
+@media (min-width: 769px) and (max-width: 1067px){
+	.navegador-menu{
+        margin-right: 0;
+        padding: 0;
+    }
+    .logo{
+        margin: 0;
+        padding: 0;
+    }
+    .navegador-menu-item{
+        padding: 0;
+        margin: 0;
+    }
+}
+@media(max-width:768px){
+    .body{
+        padding: 70px 20px 0;
+    }
+    .header{
+        height: 60px;
+        background-color: #dfd9d9;
+    }
+    .logo{
+        padding: 0 20px;
+        height: 60px;
+    }
+    .navegador-menu{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        background-color: #efefef;
+        position: fixed;
+        top:60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100% - 60px);
+        overflow-y: auto;
+        right:  100%;
+        transition: right 0.3s;
+    }
+    .navegador-menu-item{
+        line-height: 70px;
+    }
+    .navegador-toggle{
+        display: block;
+    }
+    .navegador-menu_visible{
+        right:0;
+    }
+}
+@import "../node_modules/bootstrap/scss/bootstrap";
