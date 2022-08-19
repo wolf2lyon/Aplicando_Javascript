@@ -263,7 +263,7 @@ async function fetchProductos() {
     mostrarNotificacion(`Se ha agregado un producto`)
     }
     btn_fin.addEventListener("click",()=>{
-        window.location.href = "Aplicando_Javascript/pages/finalizar_compra.html";
+        window.location.href = "/pages/finalizar_compra.html";
     })
     function eliminar_carrito(id){
         const producto=carrito.find(producto=> producto.id==id);
